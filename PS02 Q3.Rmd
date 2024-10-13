@@ -6,16 +6,12 @@ output:
 date: "2024-10-11"
 ---
 
-Task Set 1
+
 ```{r}
 fcbk <- read.csv("/Users/wyx/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Statistical Learning/Problem Sets/fcbk.csv")
-dim(fcbk)
+
 ```
 
-a)
-```{r}
-mod <- lm(assaults17~fb_hip_hop_music, data=fcbk)
-coef(mod)
 ```
 
 Task 3
@@ -44,8 +40,7 @@ install.packages('margins')
 library(margins)
 margins_summary(mod2c)
 ```
-```{r}
-install.packages('MacTex')
+
 ```
 
 
