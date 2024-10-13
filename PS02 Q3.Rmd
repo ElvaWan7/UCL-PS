@@ -1,0 +1,51 @@
+---
+title: "PS02"
+output:
+  pdf_document: default
+  html_document: default
+date: "2024-10-11"
+---
+
+Task Set 1
+```{r}
+fcbk <- read.csv("/Users/wyx/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Statistical Learning/Problem Sets/fcbk.csv")
+dim(fcbk)
+```
+
+a)
+```{r}
+mod <- lm(assaults17~fb_hip_hop_music, data=fcbk)
+coef(mod)
+```
+
+Task 3
+
+a)
+```{r}
+mod2a <- lm(assaults17~city, data=fcbk)
+summary(mod2a)
+```
+b)
+```{r}
+mod2b <- lm(assaults17~fb_hip_hop_music, data=fcbk)
+summary(mod2b)
+```
+
+c)
+```{r}
+mod2c <- lm(assaults17~city+fb_hip_hop_music+city*fb_hip_hop_music, data=fcbk)
+install.packages('texreg')
+library(texreg)
+screenreg(list(mod2a,mod2b,mod2c))
+```
+d)
+```{r}
+install.packages('margins')
+library(margins)
+margins_summary(mod2c)
+```
+```{r}
+install.packages('MacTex')
+```
+
+
